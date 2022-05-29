@@ -23,3 +23,13 @@ const dna1 = mockUpStrand();
 console.log(dna1)
 const ex1 = pAequorFactory(1, dna1);
 console.log(ex1);
+// test for extracting bases from factory func's object.
+const slicedDna1 = ex1.dna.slice(0,4);
+console.log(slicedDna1);
+const sliceDna1_2 = ex1.dna.slice(4,8);
+console.log(sliceDna1_2);
+const sliceDna1_3 = ex1.dna.slice(8,12);
+console.log(sliceDna1_3);
+const sliceDna1_4 = ex1.dna.slice(12,15);
+console.log(sliceDna1_4);
+// mutation func
