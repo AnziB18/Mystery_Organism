@@ -90,10 +90,10 @@ ex1 & ex2 only have 3rd element in common ('T') & therefore, have 25% (1/4) of t
 5. P. aequor have likelier chance of survival if their DNA is made up of at least 60% 'C' or 'G' bases. In returned object of pAequorFactory(), add another method .willLikelySurvive().
 .willLikelySurvive() returns true if object’s .dna array contains at least 60% 'C' or 'G' bases. Otherwise, .willLikelySurvive() returns false.
 
-6. With factory function set up, your team requests that you create 30 instances of pAequor that can survive in their natural
-environment. Store these instances in array for your team to study later.
+6. With factory function set up, my team requests that I create 30 instances of pAequor that can survive in their natural
+environment. Store these instances in array for my team to study later.
 
-7. If you’d like to challenge yourself further, you could consider following:
+7. For further challenge consider following:
 
 * Create .complementStrand() method to factory function’s object that returns complementary DNA strand. Rules are that 'A's match with 'T's & vice versa. Also, 'C's match with 'G's & vice versa. (Check hint for more details)
 
