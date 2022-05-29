@@ -1,7 +1,11 @@
+// general random function
+const generateRandom = (num) => {
+  return Math.floor(Math.random() * num);
+}
 // Returns a random DNA base
 const returnRandBase = () => {
   const dnaBases = ['A', 'T', 'C', 'G'];
-  return dnaBases[Math.floor(Math.random() * 4)];
+  return dnaBases[generateRandom(4)];
 };
 // Returns a random single stand of DNA containing 15 bases
 const mockUpStrand = () => {
