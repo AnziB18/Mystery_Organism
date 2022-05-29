@@ -13,6 +13,13 @@ const mockUpStrand = () => {
 };
 // factory function (or constructor func) named pAequorFactory() with two parameters
 const pAequorFactory = ( specimenNum, dna ) => {
-    this.specimenNum = specimenNum;
-    this.dna = dna;
+  return {    
+    specimenNum,
+    dna,
+  }
 };
+// hard coded test for the factory function
+const dna1 = mockUpStrand();
+console.log(dna1)
+const ex1 = pAequorFactory(1, dna1);
+console.log(ex1);
