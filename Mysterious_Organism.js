@@ -94,6 +94,10 @@ console.log(instancesOfpAequorFactory[0]);
 const [ex3,ex4,ex5,ex6,ex7,ex8,ex9,ex10,ex11,ex12,ex13,ex14,ex15,ex16,ex17,ex18,ex19,ex20,ex21,ex22,ex23,ex24,ex25,ex26,ex27,ex28,ex29,ex30] = instancesOfpAequorFactory;
 console.log(ex4);
 
+for (const property in instancesOfpAequorFactory[objects]){
+  console.log(`${property}: ${objects[property]}`);
+}
+
 // compare DNA func
 let count = 0;
 pAequorFactory.compareDNA = (obj, obj2) => {  //console.log(ex2.dna); console.log(ex1.dna);
@@ -110,7 +114,7 @@ pAequorFactory.compareDNA = (obj, obj2) => {  //console.log(ex2.dna); console.lo
   //return count;
 }
 //pAequorFactory.compareDNA(dnaEx1, dnaEx2);
-pAequorFactory.compareDNA(ex1, ex2);
+pAequorFactory.compareDNA(ex1, ex3);
 
 //test for mutation func
 /*let arrTest = [];
