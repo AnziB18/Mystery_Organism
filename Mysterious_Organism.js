@@ -22,8 +22,8 @@ const pAequorFactory = ( specimenNum, dna ) => {
     dna,
   }
 };
-// Original pAequor Organism, can be made or can be hardcoded with const dnaMocked;
-const ex1 = pAequorFactory(1, mockUpStrand());
+// original pAequor organism, can product with mockUpStrand or hardcoded with dnaMocked
+const ex1 = pAequorFactory(1,  mockUpStrand());
 //const dnaMocked = ['A', 'A', 'G', 'C', 'C', 'G', 'A', 'T', 'A', 'T', 'G', 'C', 'T', 'C', 'G'];
 
 // mutate func
@@ -79,3 +79,45 @@ let newArr = arr.slice();
   } 
   return newArr;
 }
+const ex2 = pAequorFactory(2,pAequorFactory.mutate(ex1.dna));
+let instancesOfpAequorFactory = [];
+const factory = () => {
+  for (let i = 3; i < 31; i ++){
+    instancesOfpAequorFactory.push(pAequorFactory(i, pAequorFactory.mutate(ex1.dna))); 
+  }
+  //console.log(instancesOfpAequorFactory)
+  //return instancesOfpAequorFactory;
+}
+factory();
+console.log(instancesOfpAequorFactory[0]);
+const [ex3,ex4,ex5,ex6,ex7,ex8,ex9,ex10,ex11,ex12,ex13,ex14,ex15,ex16,ex17,ex18,ex19,ex20,ex21,ex22,ex23,ex24,ex25,ex26,ex27,ex28,ex29,ex30] = instancesOfpAequorFactory;
+console.log(ex4);
+// compare DNA func
+let count = 0;
+pAequorFactory.compareDNA = (obj, obj2) => {  //console.log(ex2.dna); console.log(ex1.dna);
+  let arr = obj.dna; //console.log(arr);
+  let arr2 = obj2.dna;
+  //console.log(arr2);
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] === (arr2[i])){
+      count ++;
+    };
+  }
+  console.log(`There are ${count} single DNA\'s same `)
+  console.log(`DNA strang's of spicem #${obj.specimenNum} and spicem #${obj2.specimenNum} are ${Math.floor((count / arr.length)*10000)/100} % same `)
+  //return count;
+}
+//pAequorFactory.compareDNA(dnaEx1, dnaEx2);
+pAequorFactory.compareDNA(ex1, ex2);
+
+// loop for to produce 30 different 
+//const compare = compareDNA(dnaEx2, dnaEx1);
+//console.log(compare);
+//console.log(`DNA is ${Math.floor((compare / dnaEx1.length)*10000)/100} % same `)
+
+//test for mutation func
+/*let arrTest = [];
+for (let i= 0; i <30; i++){
+  const randomANum = generateRandom(4)+1;
+  console.log(`${randomANum}`);  
+}*/
