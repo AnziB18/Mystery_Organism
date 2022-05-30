@@ -22,12 +22,10 @@ const pAequorFactory = ( specimenNum, dna ) => {
     dna,
   }
 };
-// hard coded test for the factory function
-const dna1 = mockUpStrand(); //console.log(dna1)
-const ex1 = pAequorFactory(1, dna1);
-const dnaEx1 = ex1.dna;
+// Original pAequor Organism, can be made or can be hardcoded with const dnaMocked;
+const ex1 = pAequorFactory(1, mockUpStrand());
 //const dnaMocked = ['A', 'A', 'G', 'C', 'C', 'G', 'A', 'T', 'A', 'T', 'G', 'C', 'T', 'C', 'G'];
-console.log(dnaEx1);
+
 // mutate func
 pAequorFactory.mutate = (arr) => {
 // random num to manage how often loop is called to change ("mutate") a array item
@@ -81,7 +79,3 @@ let newArr = arr.slice();
   } 
   return newArr;
 }
-const ex2 = pAequorFactory(2,dnaEx1)
-const dnaEx2 =pAequorFactory.mutate(dnaEx1);
-console.log(dnaEx1);
-console.log(dnaEx2);
